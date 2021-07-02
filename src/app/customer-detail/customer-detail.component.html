@@ -1,0 +1,43 @@
+<tabset  #tabset>
+    <tab class="border " style="height: 100%; min-height: 16em;"
+      tab1
+      heading="Tab 1"
+      id="first"
+      #first  >
+      <div class="col-lg-10 col-md-10  mt-4 ml-4 mb-4">
+        <div class="row form-group">
+          <div class="col-lg-2 col-md-2 ">
+              <label for="email">Email: </label>
+          </div>
+          <div class="col-lg-8 col-md-8">
+               <input id="email" type="text" value="{{email}}" placeholder="Email">
+           </div>
+        </div>     
+  
+      </div>
+  
+    </tab>
+  
+    <tab  class="border " style="height: 100%; min-height: 16em;"
+      tab2
+      heading="Tab 2"
+      id="second"
+      #second>
+      <div class="col-lg-10 col-md-10 border mt-4 ml-4 mb-4">
+      <table id="customeCalender" class="table table-striped">
+        <tbody>
+          <tr *ngFor="let row of calenderDetails; let j = index;">
+          <td *ngFor="let val of row; let i = index">
+  
+              {{val}} 
+          </td>
+          <td *ngIf="row.length == 8">
+              <a *ngIf="j!=0" href="mailto:{{email}}?Subject={{row[row.length-1]}}&body= Dear  {{name}} ,  %0D  %0D Your Meeting is Schedule On  {{row[row.length-2]}} at {{row[row.length-3]}} %0D  %0D Thank you " target="_top">Send Mail </a>
+            <span *ngIf="j==0"> Action</span>
+         </td>
+        </tr>
+        </tbody>
+      </table> 
+    </div>
+    </tab>
+  </tabset>

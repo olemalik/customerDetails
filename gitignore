@@ -1,33 +1,28 @@
+
 # Prerequisites
 *.d
-
 # Object files
 *.o
 *.ko
 *.obj
 *.elf
-
 # Linker output
 *.ilk
 *.map
 *.exp
-
 # Precompiled Headers
 *.gch
 *.pch
-
 # Libraries
 *.lib
 *.a
 *.la
 *.lo
-
 # Shared objects (inc. Windows DLLs)
 *.dll
 *.so
 *.so.*
 *.dylib
-
 # Executables
 *.exe
 *.out
@@ -35,13 +30,11 @@
 *.i*86
 *.x86_64
 *.hex
-
 # Debug files
 *.dSYM/
 *.su
 *.idb
 *.pdb
-
 # Kernel Module Compile Results
 *.mod*
 *.cmd
@@ -51,4 +44,3 @@ Module.symvers
 Mkfile.old
 dkms.conf
 node_modules/
-node_modules

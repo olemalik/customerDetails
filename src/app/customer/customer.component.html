@@ -1,0 +1,38 @@
+<form [formGroup]="customerForm">
+  <div class="row form-group">
+    <div class="col-lg-5  col-md-5">
+      <input type="file" class="btn btn-secondary" (change)="onFileChange($event)"  multiple="false" />
+    </div> 
+    <div class="col-lg-3 col-md-3 ">
+      <button type="button" class="btn btn-primary col-md-4 col-lg-4"> Save </button>
+    </div>
+    <div class="col-lg-3 col-md-3"> 
+      <button type="button" class="btn btn-secondary  col-md-4 col-lg-4" 
+      printSectionId="customeCalender" ngxPrint  
+      printTitle="Customer Calendar Details" 
+      styleSheetFile="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >Print</button>
+    </div>
+  </div>
+  <div class="offset-lg-1">
+    <div class="row form-group">
+      <div class="col-lg-2 col-md-2 ">
+         <label for="id">ID: </label>
+      </div>
+      <div class="col-lg-8 col-md-8">
+          <input id="id" type="text" formControlName="id" placeholder="ID">
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-lg-2 col-md-2 ">
+          <label for="name">Name: </label>
+      </div>
+      <div class="col-lg-8 col-md-8">
+           <input id="name" type="text" formControlName="name" placeholder="Name">
+       </div>
+    </div>
+  </div>
+</form>
+
+<app-customer-detail></app-customer-detail>
+
+
